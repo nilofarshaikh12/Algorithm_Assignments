@@ -6,7 +6,6 @@ public class ZigzagArray {
 
     public static int[] zigZagArr(int arr[], int n) {
         for (int i = 0; i < n - 1; i++) {
-            // even index if a[i]>a[i+1]
             if (i % 2 == 0) {
                 if (arr[i] > arr[i + 1]) {
                     int temp = arr[i];
@@ -14,7 +13,6 @@ public class ZigzagArray {
                     arr[i + 1] = temp;
                 }
             }
-            // odd index a[i]<a[i+1]
             else {
                 if (arr[i] < arr[i + 1]) {
                     int temp = arr[i];
