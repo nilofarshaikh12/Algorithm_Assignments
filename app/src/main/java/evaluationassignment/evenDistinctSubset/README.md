@@ -13,7 +13,7 @@
 2^k - 1
 
 ```
-where `k` is the count of distinct even elements.
+- where `k` is the count of distinct even elements.
 ---
 ## 📂 Package Structure
 
