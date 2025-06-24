@@ -1,7 +1,7 @@
 
 # Check Prime Number
 
-This Java program checks whether a given number is a **prime number** or not.
+- This Java program checks whether a given number is a **prime number** or not.
 ---
 ## 🔍 What is a Prime Number?
 
