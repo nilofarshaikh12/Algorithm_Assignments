@@ -17,7 +17,7 @@ For each element in the array, compare it with the **next element**:
 **Input:**
 ```
 
-arr = \[4, 2, 1, 5, 3]
+arr = [4, 2, 1, 5, 3]
 
 ```
 
