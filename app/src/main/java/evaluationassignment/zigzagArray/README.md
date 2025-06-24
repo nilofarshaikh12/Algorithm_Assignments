@@ -8,7 +8,7 @@
 A **zigzag array** is a sequence where the elements follow the pattern:
 ```
 
-a\[0] < a\[1] > a\[2] < a\[3] > a\[4] ...
+a[0] < a[1] > a[2] < a[3] > a[4] ...
 
 ```
 
@@ -21,7 +21,7 @@ In other words:
 **Input:**
 ```
 
-\[4, 3, 7, 8, 6, 2, 1]
+[4, 3, 7, 8, 6, 2, 1]
 
 ```
 
