@@ -46,12 +46,9 @@ no
 2. Compile the program:
    ```bash
    javac CheckPalindromeNumber.java
-````
-
+   ```
 3. Run the program:
-
    ```bash
    java evaluationassignment.checkPalindromeNumber.CheckPalindromeNumber
    ```
----
 
