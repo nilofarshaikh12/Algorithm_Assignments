@@ -13,9 +13,9 @@ public class ThirdLargestElementTest {
     }
 
     @Test
-    public void testDuplicates(){
-        int[] input={10,20,40,30,20,10};
-        assertEquals(20, ThirdLargestElement.getThirdLargestElement(input, input.length);
+    public void testDuplicates() {
+        int[] input = { 10, 20, 40, 30, 20, 10 };
+        assertEquals(20, ThirdLargestElement.getThirdLargestElement(input, input.length));
     }
 
     @Test
