@@ -25,6 +25,7 @@ public class SecondLargestElement {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size of array:");
         int size = sc.nextInt();
+
         if (size < 0) {
             System.out.println("Invalid size");
             return;
