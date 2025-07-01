@@ -1,24 +1,35 @@
 package evaluationassignment.uniqueNoOfOccurences;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 public class UniqueNoOfOccurences {
 
-    public static String isFrequencyUnique(int arr[], int n) {
-        int count = 0, duplicateCount = 0;
-        for (int i = 0; i < arr.length; i++) {
-            count = 1;
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] == arr[j]) {
-                    count++;
-                }
-                duplicateCount = count;
+    public static boolean isFrequencyUnique(int arr[], int n) {
+        Map<Integer, Integer> frequencyList = new HashMap<>();
+
+        Arrays.sort(arr);
+
+        int count = 1;
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] == arr[i + 1]) {
+                count++;
+            } else {
+                frequencyList.put(arr[i], count);
+                count = 1;
             }
-            if (count > 1 && count == duplicateCount) {
-                return "false";
+
+            if (i == arr.length - 2) {
+                frequencyList.put(arr[i], count);
             }
         }
-        return "true";
+        Set<Integer> valueSet = new HashSet<>(frequencyList.values());
+
+        return frequencyList.size() == valueSet.size();
     }
 
     public static void main(String[] args) {
