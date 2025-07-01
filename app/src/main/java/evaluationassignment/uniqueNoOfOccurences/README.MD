@@ -75,12 +75,9 @@ true
 1. **Compile the code:**
    ```bash
    javac src/evaluationassignment/uniqueNoOfOccurences/UniqueNoOfOccurences.java
-````
-
+   ```
 2. **Run the program:**
-
    ```bash
    java evaluationassignment.uniqueNoOfOccurences.UniqueNoOfOccurences
    ```
-
 ---
