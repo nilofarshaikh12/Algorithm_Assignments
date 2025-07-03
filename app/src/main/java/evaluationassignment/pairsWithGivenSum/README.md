@@ -1,7 +1,7 @@
 
 # ➕ Pairs with Given Sum
 
-This Java program counts the number of **unique pairs** in an array whose sum equals a given value.
+This Java program counts the number of **pairs** in an array whose sum equals a given value.
 
 ---
 
