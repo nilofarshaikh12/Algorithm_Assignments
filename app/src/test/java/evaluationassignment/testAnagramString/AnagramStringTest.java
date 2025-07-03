@@ -1,6 +1,8 @@
 package evaluationassignment.testAnagramString;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.Test;
 import evaluationassignment.anagramString.AnagramString;
 
@@ -36,7 +38,7 @@ public class AnagramStringTest {
 
     @Test
     public void testMixedCaseStrings(){
-        String str1= "hGtfd";
+        String str1= "hGTfd";
         String str2= "hgf";
         assertEquals(2, AnagramString.countAnagram(str1, str2));
     }
@@ -46,5 +48,11 @@ public class AnagramStringTest {
         String str1= "abc";
         String str2= "xyz";
         assertEquals(6, AnagramString.countAnagram(str1, str2));
+    }
+
+    @Test
+    public void testWithNullStrings(){
+        assertThrows(NullPointerException.class, ()->AnagramString.countAnagram(null, "abc"));
+        assertThrows(NullPointerException.class, ()->AnagramString.countAnagram("ab", null));
     }
 }

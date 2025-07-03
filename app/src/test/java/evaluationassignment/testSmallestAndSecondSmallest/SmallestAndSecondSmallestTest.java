@@ -33,4 +33,12 @@ public class SmallestAndSecondSmallestTest {
         String expected = "Smallest element:-8\nSecond smallest element:-6";
         assertEquals(expected, SmallestAndSecondSmallest.getSmallestAndSecondSmallest(input, input.length));
     }
+
+    @Test
+    public void testSingleElement() {
+        int[] input = { 7 };
+        String expected = "Array must have at least two elements...";
+        assertEquals(expected, SmallestAndSecondSmallest.getSmallestAndSecondSmallest(input, input.length));
+    }
+
 }

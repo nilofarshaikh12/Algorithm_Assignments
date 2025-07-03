@@ -1,6 +1,7 @@
 package evaluationassignment.testCheckSubsequence;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 import evaluationassignment.checkSubsequence.CheckSubsequence;
 
@@ -39,5 +40,11 @@ public class CheckSubsequenceTest {
         String str1 = "abc";
         String str2 = "";
         assertEquals("no", CheckSubsequence.checkForSubsequence(str1, str2));
+    }
+
+    @Test
+    public void testWithNullString() {
+        assertThrows(NullPointerException.class, () -> CheckSubsequence.checkForSubsequence(null, "abc"));
+        assertThrows(NullPointerException.class, () -> CheckSubsequence.checkForSubsequence("abc", null));
     }
 }

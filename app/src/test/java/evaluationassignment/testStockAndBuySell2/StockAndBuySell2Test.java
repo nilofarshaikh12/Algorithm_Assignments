@@ -20,4 +20,14 @@ public class StockAndBuySell2Test {
     void testGivenArrayIsSame_thenReturnsZero() {
         assertEquals(0, StockBuyAndSell2.maxProfit(new int[] { 6, 6, 6, 6, 6, 6 }));
     }
+
+    @Test
+    void testSingleElement_thenReturnsZero() {
+        assertEquals(0, StockBuyAndSell2.maxProfit(new int[] { 10 }));
+    }
+
+    @Test
+    void testEmptyArray_thenReturnsZero() {
+        assertEquals(0, StockBuyAndSell2.maxProfit(new int[] {}));
+    }
 }

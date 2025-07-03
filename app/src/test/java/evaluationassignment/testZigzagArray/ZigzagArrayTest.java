@@ -35,6 +35,20 @@ public class ZigzagArrayTest {
     }
 
     @Test
+    public void testSingleElement() {
+        int[] input = { 1 };
+        int[] expected = { 1 };
+        assertArrayEquals(expected, ZigzagArray.zigZagArr(input, input.length));
+    }
+
+    @Test
+    public void testEmptyArray() {
+        int[] input = {};
+        int[] expected = {};
+        assertArrayEquals(expected, ZigzagArray.zigZagArr(input, input.length));
+    }
+
+    @Test
     public void testWithDuplicate() {
         int[] input = { 6, 6, 6, 6 };
         int[] expected = { 6, 6, 6, 6 };

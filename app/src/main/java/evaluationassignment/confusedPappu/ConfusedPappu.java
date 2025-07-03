@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class ConfusedPappu {
 
     public static int findDiff(int amt) {
+        if (amt < 0)
+            throw new IllegalArgumentException("Amount cannot be negative");
+
         String originalAmt = Integer.toString(amt);
         String newAmt = originalAmt.replace('6', '9');
         int mistakenAmt = Integer.parseInt(newAmt);

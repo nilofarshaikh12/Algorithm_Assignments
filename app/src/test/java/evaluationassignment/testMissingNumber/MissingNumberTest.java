@@ -1,6 +1,7 @@
 package evaluationassignment.testMissingNumber;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 import evaluationassignment.missingNumber.MissingNumber;
 
@@ -41,4 +42,14 @@ public class MissingNumberTest {
         assertEquals(6, MissingNumber.findMissingNumber(input, n));
     }
 
+    @Test
+    public void testNullArrayThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> MissingNumber.findMissingNumber(null, 5));
+    }
+
+    @Test
+    public void testIncorrectArrayLengthThrowsException() {
+        int[] input = { 1, 2 }; // length 2, but n = 5, expecting 4 elements
+        assertThrows(IllegalArgumentException.class, () -> MissingNumber.findMissingNumber(input, 5));
+    }
 }

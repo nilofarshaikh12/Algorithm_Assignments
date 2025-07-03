@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class AddMinCharToMakePalindrome {
 
     public static int addMinChar(String str) {
+        if (str.isEmpty()) {
+            return 0;
+        }
+
         int n = str.length();
         str = str.toLowerCase();
         int max = 0;

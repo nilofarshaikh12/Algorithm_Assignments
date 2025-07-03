@@ -33,4 +33,19 @@ public class ImmediateSmallerElementTest {
         int[] expected = { -1 };
         assertArrayEquals(expected, ImmediateSmallerElement.immediateSmaller(input, input.length));
     }
+
+    @Test
+    public void testArrayWithDuplicateElement() {
+        int[] input = { 8, 8, 2, 2 };
+        int[] expected = { -1, 2, -1, -1 };
+        assertArrayEquals(expected, ImmediateSmallerElement.immediateSmaller(input, input.length));
+    }
+
+    @Test
+    public void testArrayWithNegativeElement() {
+        int[] input = { -1, -3, 0, -2 };
+        int[] expected = { -3, -1, -2, -1 };
+        assertArrayEquals(expected, ImmediateSmallerElement.immediateSmaller(input, input.length));
+    }
+
 }

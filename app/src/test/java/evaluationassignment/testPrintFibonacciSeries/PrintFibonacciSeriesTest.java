@@ -22,6 +22,12 @@ public class PrintFibonacciSeriesTest {
     }
 
     @Test
+    public void testTwoLimit() {
+        List<Integer> expected = Arrays.asList(0, 1);
+        assertEquals(expected, FibonacciSeries.series(2));
+    }
+
+    @Test
     public void testFiveLimit() {
         List<Integer> expected = Arrays.asList(0, 1, 1, 2, 3);
         assertEquals(expected, FibonacciSeries.series(5));

@@ -1,10 +1,8 @@
 package evaluationassignment.testNthFibonacciNumber;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
-
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
-
 import evaluationassignment.nthFibonacciNumber.NthFibonacciNumber;
 
 public class NthFibonacciNumberTest {
@@ -25,12 +23,12 @@ public class NthFibonacciNumberTest {
     }
 
     @Test
-    public void testZeroInput() {
-        assertNull(NthFibonacciNumber.nthFibonacci(0));
+    public void testZeroInputThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> NthFibonacciNumber.nthFibonacci(0));
     }
 
     @Test
-    public void testNegativeInput() {
-        assertNull(NthFibonacciNumber.nthFibonacci(-6));
+    public void testNegativeInputThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> NthFibonacciNumber.nthFibonacci(-6));
     }
 }

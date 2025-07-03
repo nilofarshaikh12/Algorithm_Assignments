@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class CheckPalindromeString {
     public static int isPalindrome(String str) {
+        if (str == null) {
+            throw new IllegalArgumentException("Input string cannot be null");
+        }
         str = str.toLowerCase();
         char ch[] = str.toCharArray();
         int end = ch.length - 1;

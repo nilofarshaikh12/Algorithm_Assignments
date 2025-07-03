@@ -6,7 +6,7 @@ public class AlternateMergeString {
 
     public static String getAlternativeMergedString(String str1, String str2) {
         StringBuilder merged = new StringBuilder();
-       
+
         int i = 0;
         while (i < str1.length() || i < str2.length()) {
             if (i < str1.length()) {

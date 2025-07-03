@@ -1,6 +1,7 @@
 package evaluationassignment.testMaxProductSubarray;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 import evaluationassignment.maxProductSubarray.MaxProductSubarray;
 
@@ -47,4 +48,14 @@ public class MaxProductSubarrayTest {
         int[] arr = { 9 };
         assertEquals(9, MaxProductSubarray.maxProduct(arr, arr.length));
     }
+
+    @Test
+    public void testEmptyArrayThrowsException() {
+        int[] arr = {};
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            MaxProductSubarray.maxProduct(arr, arr.length);
+        });
+        assertEquals("Array must not be null or empty", exception.getMessage());
+    }
+
 }

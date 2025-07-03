@@ -20,4 +20,14 @@ public class UniqueNoOfOccurencesTest {
     void testOneFreqency_thenRetuensTrue() {
         assertEquals(true, UniqueNoOfOccurences.isFrequencyUnique(new int[] { 5 }, 1));
     }
+
+    @Test
+    void isFrequencyUnique_whenAllElementsHaveSameFrequency_thenReturnsFalse() {
+        assertEquals(false, UniqueNoOfOccurences.isFrequencyUnique(new int[] { 1, 1, 2, 2, 3, 3 }, 6));
+    }
+
+    @Test
+    void isFrequencyUnique_whenEmptyArray_thenReturnsTrue() {
+        assertEquals(true, UniqueNoOfOccurences.isFrequencyUnique(new int[] {}, 0));
+    }
 }

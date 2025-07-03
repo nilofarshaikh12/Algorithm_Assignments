@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class NthFibonacciNumber {
 
     public static Integer nthFibonacci(int n) {
+        if (n <= 0) {
+            throw new IllegalArgumentException("Fibonacci is not defined for n <= 0");
+        }
         int f1 = 0, f2 = 1, fib = 0;
         if (n <= 0) {
             return null;

@@ -34,4 +34,12 @@ public class FirstAndLastOccurenceOfXTest {
         List<Integer> result = FirstAndLastOccurenceOfX.firstAndLastOccIndex(input, input.length, 5);
         assertEquals(List.of(0, 3), result);
     }
+
+    @Test
+    public void testEmptyArray() {
+        int[] input = {};
+        List<Integer> result = FirstAndLastOccurenceOfX.firstAndLastOccIndex(input, 0, 5);
+        assertEquals(List.of(-1), result);
+    }
+
 }

@@ -2,7 +2,6 @@ package evaluationassignment.testSievePrintPrime;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import evaluationassignment.sievePrintPrime.SievePrintPrime;

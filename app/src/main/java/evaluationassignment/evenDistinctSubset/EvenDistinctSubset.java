@@ -9,6 +9,9 @@ import java.util.Set;
 public class EvenDistinctSubset {
 
     public static int getCountForEvenSubset(int arr[], int n) {
+        if (arr == null)
+            throw new NullPointerException("Input array is null");
+
         Set<Integer> evenSet = new HashSet<>();
 
         for (int num : arr) {

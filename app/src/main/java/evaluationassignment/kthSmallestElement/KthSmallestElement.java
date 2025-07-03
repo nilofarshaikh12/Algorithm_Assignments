@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class KthSmallestElement {
 
     public static String findKthSmallestElement(int arr[], int n, int k) {
-        if (k < 0 || k > n) {
+        if (k <= 0 || k > n) {
             return "Invalid value of k";
         }
         Arrays.sort(arr);

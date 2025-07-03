@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class MaxProductSubarray {
 
     public static int maxProduct(int arr[], int n) {
+        if (arr == null || arr.length == 0) {
+            throw new IllegalArgumentException("Array must not be null or empty");
+        }
+
         int max = arr[0];
         int min = arr[0];
         int maxProd = arr[0];

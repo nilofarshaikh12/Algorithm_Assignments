@@ -2,7 +2,6 @@ package evaluationassignment.testPairWithGivenSumCount;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-
 import evaluationassignment.pairsWithGivenSum.PairsWithGivenSum;
 
 public class PairWithGivenSumTest {
@@ -20,5 +19,15 @@ public class PairWithGivenSumTest {
     @Test
     void whenArrayElementSameAndTargetGiven_thenReturnsCOunt() {
         assertEquals(6, PairsWithGivenSum.getPairCount(new int[] { 1, 1, 1, 1 }, 4, 2));
+    }
+
+    @Test
+    void testEmptyArray() {
+        assertEquals(-1, PairsWithGivenSum.getPairCount(new int[] {}, 0, 5));
+    }
+
+    @Test
+    void testSingleElementArray() {
+        assertEquals(-1, PairsWithGivenSum.getPairCount(new int[] { 3 }, 1, 6));
     }
 }

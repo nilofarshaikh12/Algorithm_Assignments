@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class MissingNumber {
 
     public static int findMissingNumber(int arr[], int n) {
+        if (arr == null || arr.length != n - 1) {
+            throw new IllegalArgumentException("Invalid input: array size should be n-1");
+        }
         // total sum of natural no's upto 1 to n ==> n*(n+1)/2
         int totalSum = n * (n + 1) / 2;
         int actualSum = 0;

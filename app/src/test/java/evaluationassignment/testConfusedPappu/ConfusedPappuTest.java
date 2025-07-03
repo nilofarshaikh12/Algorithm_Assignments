@@ -1,9 +1,8 @@
 package evaluationassignment.testConfusedPappu;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
-
 import evaluationassignment.confusedPappu.ConfusedPappu;
 
 public class ConfusedPappuTest {
@@ -26,6 +25,11 @@ public class ConfusedPappuTest {
     @Test
     public void testWithZero() {
         assertEquals(0, ConfusedPappu.findDiff(0));
+    }
+
+    @Test
+    public void testNegativeAmount() {
+        assertThrows(IllegalArgumentException.class, () -> ConfusedPappu.findDiff(-66));
     }
 
 }

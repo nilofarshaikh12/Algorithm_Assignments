@@ -1,6 +1,8 @@
 package evaluationassignment.testGoodOrBadString;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.Test;
 import evaluationassignment.goodOrBadString.GoodOrBadString;
 
@@ -40,5 +42,10 @@ public class GoodOrBadStringTest {
     public void testEmptyString() {
         String str = "";
         assertEquals("Good String", GoodOrBadString.checkGoodOrBad(str));
+    }
+
+    @Test
+    public void testNullSTring() {
+        assertThrows(NullPointerException.class, () -> GoodOrBadString.checkGoodOrBad(null));
     }
 }

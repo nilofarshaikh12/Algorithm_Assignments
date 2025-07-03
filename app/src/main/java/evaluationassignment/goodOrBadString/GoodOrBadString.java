@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class GoodOrBadString {
 
     public static String checkGoodOrBad(String str) {
+        if (str == null)
+            throw new NullPointerException();
+
         str = str.toLowerCase();
         char ch[] = str.toCharArray();
         int vowelCount = 0, consonantCount = 0;

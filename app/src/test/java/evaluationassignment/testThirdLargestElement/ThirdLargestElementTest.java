@@ -19,6 +19,12 @@ public class ThirdLargestElementTest {
     }
 
     @Test
+    public void testAllEqualValues() {
+        int[] input = { 7, 7, 7 };
+        assertEquals(-1, ThirdLargestElement.getThirdLargestElement(input, input.length));
+    }
+
+    @Test
     public void testLessThanThreeDistinct() {
         int[] input = { 1, 1, 2 };
         assertEquals(-1, ThirdLargestElement.getThirdLargestElement(input, input.length));
